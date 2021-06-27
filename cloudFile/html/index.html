@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="upload">上传文件</a>
+{{ range $k, $downurl := .content }}<p>{{ $k }}:{{ $downurl }}<a href="downfile?filename={{ $downurl }}">下载</a> <a href="delfile?filename={{ $downurl }}">删除</a></p>
+{{ end }}
+</body>
+</html>
